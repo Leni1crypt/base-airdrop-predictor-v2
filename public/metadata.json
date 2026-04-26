@@ -1,0 +1,19 @@
+{
+  "name": "Base Airdrop Predictor",
+  "short_name": "Base Predictor",
+  "description": "Find out your Base airdrop probability. Paste your wallet, get your rank.",
+  "icons": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#05070f",
+  "background_color": "#05070f",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
