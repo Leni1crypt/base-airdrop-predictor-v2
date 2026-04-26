@@ -13,7 +13,5 @@
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#05070f",
-  "background_color": "#05070f",
-  "requestFramePermissions": [],
-  "majorCapabilities": []
+  "background_color": "#05070f"
 }
