@@ -195,6 +195,24 @@
     }
     #analyze-btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
 
+    #connect-btn {
+      background: rgba(79,110,247,.1);
+      color: var(--blue);
+      border: 1px solid rgba(79,110,247,.4);
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Space Grotesk', sans-serif;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all .2s;
+    }
+    #connect-btn:hover {
+      background: rgba(79,110,247,.2);
+      border-color: var(--blue);
+    }
+
     /* ── Loader ───────────────────────────────────────────────────────────── */
     .loader { display:none; flex-direction:column; align-items:center; gap:14px; padding:24px 0; }
     .loader.active { display:flex; }
@@ -445,6 +463,7 @@
         autocomplete="off"
         spellcheck="false"
       />
+      <button id="connect-btn" onclick="connectWallet()" type="button">🔗 Connect</button>
       <button id="analyze-btn" onclick="analyze()">🔍 Analyze</button>
     </div>
 
@@ -542,6 +561,23 @@
 
 <script>
   let lastResult = null;
+
+  async function connectWallet() {
+    hideError();
+    if (window.ethereum) {
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        if (accounts && accounts.length > 0) {
+          document.getElementById('wallet-input').value = accounts[0];
+          analyze();
+        }
+      } catch (err) {
+        showError('Wallet connection failed or rejected.');
+      }
+    } else {
+      showError('No Web3 wallet found. Please use the Base App or a Web3 browser.');
+    }
+  }
 
   async function analyze() {
     const addr = document.getElementById('wallet-input').value.trim();
