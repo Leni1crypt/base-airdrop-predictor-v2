@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjEsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIn0",
+    "payload": "eyJkb21haW4iOiJiYXNlLWFpcmRyb3AtcHJlZGljdG9yLnZlcmNlbC5hcHAifQ",
+    "signature": "MHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Base Airdrop Predictor",
+    "iconUrl": "https://base-airdrop-predictor.vercel.app/og-image.png",
+    "homeUrl": "https://base-airdrop-predictor.vercel.app/",
+    "imageUrl": "https://base-airdrop-predictor.vercel.app/og-image.png",
+    "buttonTitle": "Predict Airdrop",
+    "splashImageUrl": "https://base-airdrop-predictor.vercel.app/og-image.png",
+    "splashBackgroundColor": "#05070f",
+    "webhookUrl": "https://base-airdrop-predictor.vercel.app/"
+  }
+}
